@@ -36,8 +36,8 @@ if (Test-Path $directory) {
         $humanReadableSize, $unit = Convert-Size $avgSize
         
         Write-Host "Average File Size: " -NoNewline
-        Write-Host "$($humanReadableSize) " -ForegroundColor Red -NoNewline
-        Write-Host "$($unit)" -ForegroundColor Yellow
+        Write-Host "$humanReadableSize " -ForegroundColor Red -NoNewline
+        Write-Host "$unit" -ForegroundColor Yellow
     } else {
         Write-Host "No accessible files found in the directory." 
     }
