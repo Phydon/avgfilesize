@@ -7,7 +7,7 @@ $scriptName = $MyInvocation.MyCommand.Name
 
 if (-not $directory) {
     Write-Host "Usage: ." -ForegroundColor Blue -NoNewline
-    Write-Host "\$scriptName" -ForegroundColor White -NoNewLine
+    Write-Host "\$scriptName" -NoNewLine
     Write-Host " <" -ForegroundColor Yellow -NoNewLine
     Write-Host "PATH" -ForegroundColor Red -NoNewLine
     Write-Host ">" -ForegroundColor Yellow 
@@ -39,8 +39,8 @@ if (Test-Path $directory) {
         Write-Host "$($humanReadableSize) " -ForegroundColor Red -NoNewline
         Write-Host "$($unit)" -ForegroundColor Yellow
     } else {
-        Write-Host "No accessible files found in the directory." -ForegroundColor White
+        Write-Host "No accessible files found in the directory." 
     }
 } else {
-    Write-Host "The specified directory does not exist." -ForegroundColor White
+    Write-Host "The specified directory does not exist." 
 }
